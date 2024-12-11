@@ -46,7 +46,7 @@ const emitFilter = () => {
 }
 
 .input {
-  width: 100%;
+  width: 30%;
   height: 45px;
   padding: 8px 16px;
   border: 1px solid var(--grey-300);
