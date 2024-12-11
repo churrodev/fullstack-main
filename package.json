@@ -1,0 +1,22 @@
+{
+  "name": "@fullstack-test/root",
+  "version": "0.0.0",
+  "description": "A test for fullstack candidates in Wallbox",
+  "license": "ISC",
+  "author": "Wallbox Developers",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build --workspaces",
+    "serve:backend": "npm run serve -w @fullstack-test/backend",
+    "serve:backoffice": "npm run serve -w @fullstack-test/backoffice",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.5",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.4.0"
+  }
+}
