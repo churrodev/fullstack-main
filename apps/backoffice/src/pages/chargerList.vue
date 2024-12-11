@@ -170,22 +170,22 @@ const statusCards = computed(() => [
   {
     title: 'Total Chargers',
     value: data.chargers.length,
-    color: '#000', // Negro para el total
+    color: '#000',
   },
   {
     title: 'Ready',
     value: data.chargers.filter(charger => chargerStatus.getStatus(charger.status).text === 'ready').length,
-    color: 'var(--success-700)', // Verde para ready
+    color: 'var(--success-700)',
   },
   {
     title: 'Charging',
     value: data.chargers.filter(charger => chargerStatus.getStatus(charger.status).text === 'charging').length,
-    color: 'var(--info-700)', // Azul para charging
+    color: 'var(--info-700)',
   },
   {
     title: 'Error',
     value: data.chargers.filter(charger => chargerStatus.getStatus(charger.status).text === 'error').length,
-    color: 'var(--danger-700)', // Rojo para error
+    color: 'var(--danger-700)',
   },
 ]);
 
@@ -212,8 +212,6 @@ const methods = {
   async loadChargers () {
     const { chargers } = await chargersApi.getChargers()
     data.chargers = chargers
-    // Chequeo para confirmar qué valores se están calculando
-    console.log('Status Cards:', data.chargers);
   },
 
   deleteCharger (position: number) {
